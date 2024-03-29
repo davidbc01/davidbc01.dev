@@ -1,0 +1,24 @@
+---
+import Badges from "./Badges.astro";
+import MailIcon from "./icons/MailIcon.astro";
+
+const personalImage = "David"
+---
+
+<div class="max-w-xl">
+    <div class="flex gap-4 mb-4">
+        <img class="rounded-full shadow-lg size-16" src="/me.webp" alt={personalImage} />
+    </div>
+    <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-white">
+        Hola, soy David
+    </h1>
+    <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-blue-400 [&>strong]:text-blue-500 [&>strong]:font-semibold dark:text-gray-300">
+        Estudiante de <strong>Desarrollo de Aplicaciones Web</strong> de Badajoz, España 🇪🇸.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+        <Badges href="mailto:dbartolc01@iescastelar.com">
+            <MailIcon class="size-4" />
+            Contáctame
+        </Badges>
+    </nav>
+</div>
