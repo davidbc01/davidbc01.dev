@@ -1,9 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import Hero from "../components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Hero from "../components/Hero.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Contact from "../components/Contact.astro";
 import CustomCursor from "../components/cursor/CustomCursor.astro";
+import BriefcaseIcon from "../components/icons/BriefcaseIcon.astro";
+import EducationIcon from "../components/icons/EducationIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import AboutMeIcon from "../components/icons/AboutMeIcon.astro";
 ---
 
 <Layout
@@ -12,10 +21,56 @@ import CustomCursor from "../components/cursor/CustomCursor.astro";
 >
 	<Navbar />
 	<main class="px-4">
-		<SectionContainer id="#" className="py-16 md:py-36">
+		<SectionContainer className="py-16 md:py-36">
 			<Hero />
 		</SectionContainer>
 
+		<div class="space-y-24">
+			<SectionContainer id="experiencia">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<BriefcaseIcon class="size-8" />
+					Experiencia laboral
+			  	</h2>
+
+				<Experience />
+			</SectionContainer>
+
+			<SectionContainer id="educacion">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<EducationIcon class="size-8" />
+					Educación
+			  	</h2>
+
+				<Education />
+			</SectionContainer>
+
+			<SectionContainer id="proyectos">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<CodeIcon class="size-8" />
+					Proyectos
+			  	</h2>
+
+				<Projects />
+			</SectionContainer>
+
+			<SectionContainer id="sobre-mi">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					<AboutMeIcon class="size-8" />
+					Sobre mí
+			  	</h2>
+
+				<AboutMe />
+			</SectionContainer>
+
+			<SectionContainer id="contacto">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+					
+					Contacto
+			  	</h2>
+
+				<Contact />
+			</SectionContainer>
+		</div>
 
 		<CustomCursor />
 	</main>
