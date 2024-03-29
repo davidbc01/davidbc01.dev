@@ -1,6 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Hero from "../components/Hero.astro";
+import CustomCursor from "../components/cursor/CustomCursor.astro";
 ---
 
 <Layout
@@ -8,4 +11,12 @@ import Navbar from '../components/Navbar.astro';
 	description="Portafolio desarrollado con Astro por davidbc01, estudiante de desarrollo de aplicaciones web."
 >
 	<Navbar />
+	<main class="px-4">
+		<SectionContainer id="#" className="py-16 md:py-36">
+			<Hero />
+		</SectionContainer>
+
+
+		<CustomCursor />
+	</main>
 </Layout>
