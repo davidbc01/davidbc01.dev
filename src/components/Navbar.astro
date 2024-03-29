@@ -2,9 +2,10 @@
     <nav class="bg-transparent p-4 rounded-lg mt-0 mb-4 mx-6">
         <div class="container mx-auto flex justify-center items-center text-sm font-medium">
             <div class="lg:flex items-center space-x-4">
-                <a href="#sobre-mi" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Sobre mí</a>
                 <a href="#experiencia" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Experiencia</a>
+                <a href="#experiencia" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Educación</a>
                 <a href="#proyectos" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Proyectos</a>
+                <a href="#sobre-mi" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Sobre mí</a>
                 <a href="#contacto" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Contacto</a>
                 <a id="darkModeBtn" class="bg-inherit w-8 h-8 rounded flex items-center justify-center transition-transform transform-gpu hover:scale-125">
                     <svg class="w-[16px] h-[16px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -23,11 +24,7 @@
 
         // Función para actualizar el modo oscuro
         function updateDarkMode() {
-            if (
-                localStorage.theme === "dark" ||
-                (!("theme" in localStorage) &&
-                    window.matchMedia("(prefers-color-scheme: dark)").matches)
-            ) {
+            if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
                 htmlElement.classList.add("dark");
                 setDarkModeIcon();
             } else {
@@ -62,9 +59,7 @@
         updateDarkMode();
 
         // Escuchar cambios en la preferencia de color del sistema operativo directamente
-        const colorSchemeQuery = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-        );
+        const colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
         // Función para manejar el cambio en la preferencia de color del sistema operativo
         function handleColorSchemeChange(event: MediaQueryListEvent) {
