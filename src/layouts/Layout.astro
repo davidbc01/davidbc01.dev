@@ -1,7 +1,9 @@
 ---
+import "@fontsource-variable/onest";
+
 interface Props {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description } = Astro.props;
@@ -9,28 +11,37 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="es" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="keywords" content="davidbc01, Portafolio, Portfolio, Desarrollo Web, Astro, JavaScript, HTML, CSS, Diseño UX/UI, Desarrollo Frontend" />
-    <meta name="author" content="davidbc01" />
-    <meta name="viewport" content="width=device-width" />
-    <meta property="og:title" content="Portafolio de davidbc01 - Estudiante de Desasrrollo de Aplicaciones Web" />
-	  <meta property="og:description" content="Portafolio desarrollado con Astro por davidbc01, estudiante de desarrollo de aplicaciones web." />
-	  <meta property="og:image" content="" />
-	  <meta property="or:url" content="https://davidbc01-dev.vercel.app/" />
-    <link rel="canonical" href="https://davidbc01-dev.vercel.app/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body class="bg-zinc-200 dark:bg-zinc-900">
-    <slot />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="davidbc01, Portafolio, Portfolio, Desarrollo Web, Astro, JavaScript, HTML, CSS, Diseño UX/UI, Desarrollo Frontend"
+        />
+        <meta name="author" content="davidbc01" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+            property="og:title"
+            content="Portafolio de davidbc01 - Estudiante de Desasrrollo de Aplicaciones Web"
+        />
+        <meta
+            property="og:description"
+            content="Portafolio desarrollado con Astro por davidbc01, estudiante de desarrollo de aplicaciones web."
+        />
+        <meta property="og:image" content="" />
+        <meta property="or:url" content="https://davidbc01-dev.vercel.app/" />
+        <link rel="canonical" href="https://davidbc01-dev.vercel.app/" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="bg-zinc-200 dark:bg-zinc-900">
+        <slot />
+    </body>
 </html>
 
 <style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-  }
+    html {
+        font-family: 'Onest Variable', sans-serif;
+    }
 </style>
