@@ -2,10 +2,11 @@
 import ThemeToogle from "./ThemeToogle.astro";
 ---
 
-<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-    <nav class="p-2 rounded-full mt-0 mb-4 mx-6 backdrop-filter backdrop-blur-md bg-opacity-20 transition duration-300 ease-in-out">
-        <div class="container mx-auto flex justify-center items-center text-sm font-medium">
-            <div class="lg:flex items-center space-x-4">
+<header class="lg:fixed lg:top-0 lg:z-10 lg:flex lg:items-center lg:justify-center lg:w-full lg:mx-auto lg:mt-2">
+    <nav class="backdrop-filter backdrop-blur-md bg-opacity-20 transition duration-300 ease-in-out p-2 m-4 rounded lg:p-2 lg:rounded-full lg:mt-0 lg:mb-4 lg:mx-6 lg:backdrop-filter lg:backdrop-blur-md lg:bg-opacity-20 lg:transition lg:duration-300 lg:ease-in-out">
+        <div class="container mx-auto flex md:justify-center justify-between items-center text-sm font-medium">
+            <div></div>
+            <div class="lg:flex lg:items-center lg:space-x-4 hidden md:block">
                 <a href="#experiencia" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none pl-4">Experiencia</a>
                 <a href="#educacion" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Educación</a>
                 <a href="#proyectos" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Proyectos</a>
@@ -13,9 +14,24 @@ import ThemeToogle from "./ThemeToogle.astro";
                 <a href="#contacto" class="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-500 cursor-none">Contacto</a>
                 <ThemeToogle />
             </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-black dark:text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
 </header>
+<div id="responsive-menu" class="hidden md:hidden m-4 mt-2 rounded text-center">
+    <a href="#experiencia" class="block py-2 px-4 text-black dark:text-white">Experiencia</a>
+    <a href="#educacion" class="block py-2 px-4 text-black dark:text-white">Educación</a>
+    <a href="#proyectos" class="block py-2 px-4 text-black dark:text-white">Proyectos</a>
+    <a href="#sobre-mi" class="block py-2 px-4 text-black dark:text-white">Sobre mí</a>
+    <a href="#contacto" class="block py-2 px-4 text-black dark:text-white">Contacto</a>
+</div>
 
 <script>
     /*-Modificador del navbar-*/
@@ -34,5 +50,18 @@ import ThemeToogle from "./ThemeToogle.astro";
     }
 
     window.addEventListener('scroll', handleScroll);
+
+
+    /*-Menu responsive-*/
+    const menuToggle = document.getElementById('menu-toggle');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+            const menu = document.getElementById('responsive-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        });
+    }
 </script>
 
