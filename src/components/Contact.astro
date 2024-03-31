@@ -1,0 +1,30 @@
+---
+import ContactForm from "./ContactForm.astro";
+import SocialMediaBadges from "./SocialMediaBadges.astro";
+import Linkedin from "./icons/social/Linkedin.astro";
+import Github from "./icons/social/GitHub.astro";
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="p-4 text-gray-700 dark:text-gray-300">
+        <p class="text-pretty text-center text-lg">
+            Redes sociales:
+        </p>
+        <div class="pt-6 flex justify-center items-center">
+            <SocialMediaBadges href="https://www.linkedin.com/in/dbc018/">
+                <Linkedin />
+                LinkedIn
+            </SocialMediaBadges>
+            <SocialMediaBadges href="https://github.com/davidbc01">
+                <Github />
+                GitHub
+            </SocialMediaBadges>
+        </div>
+    </div>
+    <div class="p-4">
+        <h1 class="text-lg font-medium text-gray-700 dark:text-gray-300 text-center pb-6">
+            ¡Envíame un mensaje!
+        </h1>
+        <ContactForm />
+    </div>
+</div>
