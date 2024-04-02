@@ -1,0 +1,39 @@
+---
+import ProjectsCards from "./ProjectsCards.astro";
+import ProjectsCardsBadges from "./ProjectsCardsBadges.astro";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="md:col-span-1">
+        <ProjectsCards image="/projects/linksWeb.webp" altText="Web foto" title="Web de links" description="Web contenedor para links de redes sociales">
+            <div class="pt-4 flex justify-evenly">
+                <div>
+                    <ProjectsCardsBadges href="https://github.com/dkszdp/kaoszd">
+                        <i class="fa-brands fa-github pr-1"></i> Code
+                    </ProjectsCardsBadges>
+                </div>
+                <div>
+                    <ProjectsCardsBadges href="https://kaoszd.vercel.app/">
+                        <i class="fa-solid fa-link pr-1"></i> Preview
+                    </ProjectsCardsBadges>
+                </div>
+            </div>
+        </ProjectsCards>
+    </div>
+    <div class="md:col-span-1">
+        <ProjectsCards image="/projects/oldPortfolio.webp" altText="Portafolio foto" title="Portafolio antiguo" description="Antiguo portafolio diseñado a partir de un curso de freeCodeCamp">
+            <div class="pt-4 flex justify-evenly">
+                <div>
+                    <ProjectsCardsBadges href="https://github.com/dkszdp/portafolio-dkszdp">
+                        <i class="fa-brands fa-github pr-1"></i> Code
+                    </ProjectsCardsBadges>
+                </div>
+                <div>
+                    <ProjectsCardsBadges href="https://dkszdp.github.io/portafolio-dkszdp/">
+                        <i class="fa-solid fa-link pr-1"></i> Preview
+                    </ProjectsCardsBadges>
+                </div>
+            </div>
+        </ProjectsCards>
+    </div>
+</div>
