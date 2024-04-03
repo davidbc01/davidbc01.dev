@@ -5,7 +5,7 @@
     }
 </style>
 
-<form action="https://formspree.io/f/mvoewber" method="post" class="space-y-8">
+<form id="contactForm" action="https://formspree.io/f/mvoewber" method="post" class="space-y-8">
     <div class="pt-2">
         <label for="email" class="block mb-2 font-normal text-gray-700 dark:text-gray-300 cursor-none">
             Correo electrónico
@@ -26,3 +26,12 @@
         </button>
     </div>        
 </form>
+
+<script>
+    const form = document.getElementById("contactForm") as HTMLFormElement;
+
+    form?.addEventListener("submit", function(event) {
+        event.preventDefault();
+        form.reset();
+    });
+</script>
