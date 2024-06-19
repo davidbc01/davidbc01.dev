@@ -6,10 +6,13 @@ import HtmlSvg from "./icons/pills/HtmlSvg.astro";
 import BootstrapSvg from "./icons/pills/BootstrapSvg.astro";
 import JsSvg from "./icons/pills/JsSvg.astro";
 import CssSvg from "./icons/pills/CssSvg.astro";
+import Laravel from "./icons/pills/Laravel.astro";
+import TailwindCSS from "./icons/pills/TailwindCSS.astro";
 ---
 
 <div class="grid grid-col-1 md:grid-cols-2 gap-4">
     <div class="md:col-span-1">
+        {/* Contenedor de links kaoszd */}
         <ProjectsCards image="/projects/linksWeb.webp" altText="Web foto" title="Web de links" description="Web contenedor para links de redes sociales">
             <div slot="pills" class="p-2">
                 <ProjectsCardsPills classes="inline-flex items-center bg-orange-100 text-orange-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-orange-900 dark:text-orange-300">
@@ -37,6 +40,7 @@ import CssSvg from "./icons/pills/CssSvg.astro";
         </ProjectsCards>
     </div>
     <div class="md:col-span-1">
+        {/* Portafolio antiguo sencillo */}
         <ProjectsCards image="/projects/oldPortfolio.webp" altText="Portafolio foto" title="Portafolio antiguo" description="Antiguo portafolio diseñado a partir de un curso">
             <div slot="pills" class="p-2">
                 <ProjectsCardsPills classes="inline-flex items-center bg-orange-100 text-orange-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-orange-900 dark:text-orange-300">
@@ -63,4 +67,54 @@ import CssSvg from "./icons/pills/CssSvg.astro";
             </div>
         </ProjectsCards>
     </div>
+    <div class="md:col-span-1">
+        {/* NimbusNote */}
+        <ProjectsCards image="/projects/nimbusnote.webp" altText="Portafolio foto" title="NimbusNote" description="Proyecto fin de grado superior de desarrollo de aplicaciones web">
+            <div slot="pills" class="p-2">
+                <ProjectsCardsPills classes="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
+                    <Laravel /> Laravel
+                </ProjectsCardsPills>
+                <ProjectsCardsPills classes="inline-flex items-center bg-sky-200 text-sky-600 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-sky-900 dark:text-sky-300">
+                    <TailwindCSS /> Tailwind
+                </ProjectsCardsPills>
+            </div>
+            <div class="pt-4 flex justify-evenly">
+                <div>
+                    <ProjectsCardsBadges href="https://github.com/davidbc01/nimbusnote">
+                        <i class="fa-brands fa-github pr-1"></i> Code
+                    </ProjectsCardsBadges>
+                </div>
+                <div>
+                    <ProjectsCardsBadges href="https://nimbusnote.es/">
+                        <i class="fa-solid fa-link pr-1"></i> Preview
+                    </ProjectsCardsBadges>
+                </div>
+            </div>
+        </ProjectsCards>
+    </div>
+    <!-- <div class="md:col-span-1">
+        {/* Secade Reservations - Obi Reservations */}
+        <ProjectsCards image="/projects/obiReservations.webp" altText="Portafolio foto" title="Obi Reservations" description="Proyecto personalizado para las prácticas en Cedesa">
+            <div slot="pills" class="p-2">
+                <ProjectsCardsPills classes="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
+                    <Laravel /> Laravel
+                </ProjectsCardsPills>
+                <ProjectsCardsPills classes="inline-flex items-center bg-sky-200 text-sky-600 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-sky-900 dark:text-sky-300">
+                    <TailwindCSS /> Tailwind
+                </ProjectsCardsPills>
+            </div>
+            <div class="pt-4 flex justify-evenly">
+                <div>
+                    <ProjectsCardsBadges href="https://github.com/davidbc01/secade-reservations">
+                        <i class="fa-brands fa-github pr-1"></i> Code
+                    </ProjectsCardsBadges>
+                </div>
+                <div>
+                    <ProjectsCardsBadges href="https://obi.cedesa.es/">
+                        <i class="fa-solid fa-link pr-1"></i> Preview
+                    </ProjectsCardsBadges>
+                </div>
+            </div>
+        </ProjectsCards>
+    </div> -->
 </div>
