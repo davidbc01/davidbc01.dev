@@ -9,7 +9,7 @@ interface Props {
 const { image, altText, title, description } = Astro.props;
 ---
 
-<div class="flex flex-col items-center cursor-none bg-white border border-zinc-200 rounded-lg shadow md:flex-row md:max-w-md dark:border-zinc-700 dark:bg-zinc-800">
+<div class="flex flex-col items-center bg-white border border-zinc-200 rounded-lg shadow md:flex-row md:max-w-md dark:border-zinc-700 dark:bg-zinc-800">
     <img src={image} alt={altText} class="object-cover w-full rounded-t-lg h-60 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg sm:w-40 sm:h-40">
     <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
